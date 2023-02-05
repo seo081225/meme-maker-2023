@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://kit.fontawesome.com/56f7bebfad.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meme Maker</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="shortcut icon" href="image/icon.png" sizes="150x150" />
+    </head>
+    <body>
+        <div class="tool-bar">
+            <div class="tool-btns">
+                <button id="mode-btn" class="fa-solid fa-pen selected" title="그리기"></button>
+                <button id="paint-btn" class="fa-solid fa-paintbrush" title="면적 자동 채우기"></button>
+                <button id="eraser-btn" class="fa-solid fa-eraser" title="지우개"></button>
+                <button id="line-cap-btn" class="fa-solid fa-square-full" data-shape="square" title="사각형 브러쉬"></button>
+            </div>
+            <div class="line-width-container">
+                <input id="line-width" type="range" min="1" max="30" value="10" title="브러쉬 사이즈" />
+            </div>
+            <div id="color-options-container">
+                <input type="color" id="color" />
+                <div class="color-options">
+                    <div class="color-option" style="background-color: #f43545" data-color="#f43545"></div>
+                    <div class="color-option" style="background-color: #fefefe" data-color="#fefefe"></div>
+                    <div class="color-option" style="background-color: #ff8a02" data-color="#ff8a02"></div>
+                    <div class="color-option" style="background-color: #131313" data-color="#131313"></div>
+                    <div class="color-option" style="background-color: #fad716" data-color="#fad716"></div>
+                    <div class="color-option" style="background-color: #c0c0c0" data-color="#c0c0c0"></div>
+                    <div class="color-option" style="background-color: #01ba72" data-color="#01ba72"></div>
+                    <div class="color-option" style="background-color: #d9b645" data-color="#d9b645"></div>
+                    <div class="color-option" style="background-color: #01c2de" data-color="#01c2de"></div>
+                    <div class="color-option" style="background-color: #ffe6a7" data-color="#ffe6a7"></div>
+                    <div class="color-option" style="background-color: #00428d" data-color="#00428d"></div>
+                    <div class="color-option" style="background-color: #99582a" data-color="#99582a"></div>
+                    <div class="color-option" style="background-color: #602778" data-color="#602778"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tool-bar">
+            <div class="tool-btns">
+                <button id="fill-btn" class="fa-solid fa-fill-drip" title="캔버스 채우기"></button>
+                <button id="destroy-btn" class="fa-solid fa-file" title="캔버스 초기화"></button>
+                <button class="fa-solid" id="text-btn" title="텍스트 입력"><span>T</span></button>
+            </div>
+            <div class="font-size-container">
+                <input id="font-size" type="range" min="10" max="80" value="30" step="1" title="폰트사이즈" />
+            </div>
+            <div class="tool-btns">
+                <button id="cat" class="fa-solid fa-cat"></button>
+                <button id="bird" class="fa-solid fa-kiwi-bird"></button>
+                <button id="frog" class="fa-solid fa-frog"></button>
+                <button id="horse" class="fa-solid fa-chess-knight"></button>
+                <label for="file" class="fa-solid fa-image" title="이미지 불러오기">
+                    <input type="file" title="Input an image" accept="image/*" id="file" />
+                </label>
+                <button id="save" class="fa-solid fa-floppy-disk" title="저장하기"></button>
+            </div>
+        </div>
+        <div id="draw-box"><canvas></canvas></div>
+        <script src="index.js"></script>
+    </body>
+</html>
